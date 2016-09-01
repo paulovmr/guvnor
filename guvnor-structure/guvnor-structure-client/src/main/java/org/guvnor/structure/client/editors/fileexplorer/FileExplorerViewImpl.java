@@ -27,6 +27,7 @@ import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
+import org.guvnor.structure.client.resources.i18n.CommonConstants;
 import org.guvnor.structure.repositories.Repository;
 import org.uberfire.backend.vfs.Path;
 import org.uberfire.ext.widgets.core.client.tree.Tree;
@@ -51,7 +52,7 @@ public class FileExplorerViewImpl
 
     public void init( final FileExplorerPresenter presenter ) {
         this.presenter = presenter;
-        rootTreeItem = tree.addItem( TreeItem.Type.FOLDER, "Repositories" );
+        rootTreeItem = tree.addItem( TreeItem.Type.FOLDER, CommonConstants.INSTANCE.Repositories() );
         rootTreeItem.setState( TreeItem.State.OPEN );
 
         panel.getElement().getStyle().setFloat(Style.Float.LEFT);
